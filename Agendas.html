@@ -73,7 +73,7 @@
     <h2>Car Wash Zinth</h2>
     <h3>Agenda tu cita </h3>
     <form action="Regresaralinicio.html" method="POST" onsubmit="window.location.href = document.getElementById('redirect-url').value;">
-        <div class="form-group">
+             <div class="form-group">
             <label for="nombre">Nombre Completo</label>
             <input type="text" id="nombre" name="nombre" required>
         </div>
@@ -103,7 +103,8 @@
             <input type="date" id="fecha" name="fecha" required>
         </div>
 
-       
+        <input type="submit" value="Agendar Cita">
+        <input type="hidden" id="redirect-url" value="URL_DE_REDIRECCION">
     </form>
 </div>
 
