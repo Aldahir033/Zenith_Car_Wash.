@@ -1,341 +1,371 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zenith Car Wash - Cuidado Premium para tu Automóvil</title>
-    <style>
-        /* Estilos generales */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #D3D3D3; /* Gris claro */
-    color: #808080; /* Gris */
-    line-height: 1.6;
-    background-image: url('imagens fondo.jpg');
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Zenith Car Wash - Cuidado Premium para tu Automóvil</title>
+            <style>
+                /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D3D3D3; /* Gris claro */
+            color: #808080; /* Gris */
+            line-height: 1.6;
+            background-image: url('imagens/fondo.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed; /* Añadido para fijar la imagen de fondo */
-}
+        }
 
-header {
-    background-color: #696969; /* Gris muy oscuro */
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+        header {
+            background-color: #696969; /* Gris muy oscuro */
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-header h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
 
-header p {
-    font-size: 1.1em;
-    color: #D3D3D3; /* Gris claro */
-}
+        header p {
+            font-size: 1.1em;
+            color: #D3D3D3; /* Gris claro */
+        }
 
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #808080; /* Gris */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #808080; /* Gris */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
 
-nav a {
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
+        nav a {
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
 
-nav a:hover {
-    background-color: #A9A9A9; /* Gris oscuro */
-}
+        nav a:hover {
+            background-color: #A9A9A9; /* Gris oscuro */
+        }
 
-section {
-    padding: 40px;
-    margin: 20px auto;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-    max-width: 960px;
-}
+        section {
+            padding: 40px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            max-width: 960px;
+        }
 
-section h2 {
-    color: #808080; /* Gris */
-    margin-bottom: 20px;
-    border-bottom: 2px solid #A9A9A9; /* Gris oscuro */
-    padding-bottom: 10px;
-}
+        section h2 {
+            color: #808080; /* Gris */
+            margin-bottom: 20px;
+            border-bottom: 2px solid #A9A9A9; /* Gris oscuro */
+            padding-bottom: 10px;
+        }
 
-section p {
-    margin-bottom: 15px;
-}
+        section p {
+            margin-bottom: 15px;
+        }
 
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #A9A9A9; /* Gris oscuro */
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
-}
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #A9A9A9; /* Gris oscuro */
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
 
-.btn:hover {
-    background-color: #808080; /* Gris */
-}
+        .btn:hover {
+            background-color: #808080; /* Gris */
+        }
 
-.form-container input[type=text],
-.form-container input[type=datetime-local] {
-    width: calc(100% - 22px);
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #D3D3D3; /* Gris claro */
-    border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 1em;
-}
+        .form-container input[type=text],
+        .form-container input[type=datetime-local] {
+            width: calc(100% - 22px);
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #D3D3D3; /* Gris claro */
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
 
-.form-container label {
-    display: block;
-    margin-bottom: 5px;
-    color: #808080; /* Gris */
-    font-weight: bold;
-}
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #808080; /* Gris */
+            font-weight: bold;
+        }
 
-.form-container input[type=submit] {
-    background-color: #696969; /* Gris muy oscuro */
-    color: white;
-    padding: 14px 24px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
+        .form-container input[type=submit] {
+            background-color: #696969; /* Gris muy oscuro */
+            color: white;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
 
-.form-container input[type=submit]:hover {
-    background-color: #808080; /* Gris */
-}
+        .form-container input[type=submit]:hover {
+            background-color: #808080; /* Gris */
+        }
 
-.hidden {
-    display: none;
-}
+        .hidden {
+            display: none;
+        }
 
-.welcome-message {
-    margin-top: 30px;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-radius: 6px;
-    background-color: #f9f9f9;
-}
+        .welcome-message {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+        }
 
-.welcome-message h3 {
-    color: #27ae60;
-    margin-bottom: 10px;
-}
+        .welcome-message h3 {
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
 
-.service-item {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #eee;
-    border-radius: 6px;
-    background-color: #fff;
-}
+        .service-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            background-color: #fff;
+        }
 
-.service-item h4 {
-    color: #34495e;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
+        .service-item h4 {
+            color: #34495e;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
 
-.service-item p {
-    color: #555;
-}
+        .service-item p {
+            color: #555;
+        }
 
-.cost-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
 
-.cost-table th, .cost-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
+        .cost-table th, .cost-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
 
-.cost-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
+        .cost-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
 
-.extra-feature {
-    margin-bottom: 15px;
-    padding: 15px;
-    border: 1px solid #eee;
-    border-radius: 6px;
-    background-color: #fff;
-}
+        .extra-feature {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            background-color: #fff;
+        }
 
-.extra-feature h4 {
-    color: #e67e22;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
+        .extra-feature h4 {
+            color: #e67e22;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
 
-.extra-feature p {
-    color: #555;
-}
+        .extra-feature p {
+            color: #555;
+        }
 
-.contact-info p {
-    margin-bottom: 10px;
-}
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
 
-.contact-info a {
-    color: #3498db;
-    text-decoration: none;
-}
+        .contact-info p {
+            margin-bottom: 0; /* Remove default paragraph margin */
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
 
-.contact-info a:hover {
-    text-decoration: underline;
-}
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
 
-.image-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
 
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-#paymentSection {
-    display: none;
-    margin-top: 30px;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-radius: 6px;
-    background-color: #f9f9f9;
-}
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
 
-#paymentSection h2 {
-    color: #27ae60;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #27ae60;
-    padding-bottom: 5px;
-}
+        #paymentSection {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+        }
 
-.payment-options {
-    margin-top: 10px;
-}
+        #paymentSection h2 {
+            color: #27ae60;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #27ae60;
+            padding-bottom: 5px;
+        }
 
-.payment-options button {
-    padding: 10px 20px;
-                margin-right: 10px;
-                background-color: #f39c12;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 1em;
-                transition: background-color 0.3s ease;
-                margin-bottom: 10px;
-            }
-            .payment-options button:hover {
-                background-color: #e18e0b;
-            }
-            .header-flex {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 60px; /* Puedes ajustar el espacio entre el logo y el texto */
-                padding: 20px;
-                flex-wrap: wrap; /* Para mejor adaptabilidad en pantallas pequeñas */
-            }
+        .payment-options {
+            margin-top: 10px;
+        }
 
-            .logo-header {
-                height: 240px;
-                width: auto;
-            }
+        .payment-options button {
+            padding: 10px 20px;
+                        margin-right: 10px;
+                        background-color: #f39c12;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-size: 1em;
+                        transition: background-color 0.3s ease;
+                        margin-bottom: 10px;
+                    }
+                    .payment-options button:hover {
+                        background-color: #e18e0b;
+                    }
+                    .header-flex {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 60px; /* Puedes ajustar el espacio entre el logo y el texto */
+                        padding: 20px;
+                        flex-wrap: wrap; /* Para mejor adaptabilidad en pantallas pequeñas */
+                    }
 
-            .header-text {
-                max-width: 500px; /* Limita el ancho del texto */
-            }
+                    .logo-header {
+                        height: 240px;
+                        width: auto;
+                    }
 
-            .header-text h1 {
-                margin: 0;
-                font-size: 2em;
-            }
+                    .header-text {
+                        max-width: 500px; /* Limita el ancho del texto */
+                    }
 
-            .header-text p {
-                margin-top: 10px;
-                font-size: 1.1em;
-            }
+                    .header-text h1 {
+                        margin: 0;
+                        font-size: 2em;
+                    }
 
-            /* Estilo para acomodar imágenes 2x2 */
-            .service-item .image-container,
-            .extra-feature .image-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center; /* Centra las imágenes en la fila */
-                gap: 10px; /* Espacio entre las imágenes */
-            }
+                    .header-text p {
+                        margin-top: 10px;
+                        font-size: 1.1em;
+                    }
 
-            .service-item .image-container img,
-            .extra-feature .image-container img {
-                width: calc(50% - 15px); /* Dos imágenes por fila con un pequeño margen */
-                max-width: 400px; /* O un valor fijo si lo prefieres */
-                margin-bottom: 10px; /* Espacio debajo de cada par de imágenes */
-            }
+                    /* Estilo para acomodar imágenes 2x2 */
+                    .service-item .image-container,
+                    .extra-feature .image-container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center; /* Centra las imágenes en la fila */
+                        gap: 10px; /* Espacio entre las imágenes */
+                    }
 
-            /* Ajuste para que una sola imagen ocupe todo el ancho */
-            .service-item:nth-child(odd) .image-container,
-            .extra-feature:nth-child(odd) .image-container {
-                justify-content: center; /* Centra la única imagen */
-            }
+                    .service-item .image-container img,
+                    .extra-feature .image-container img {
+                        width: calc(50% - 15px); /* Dos imágenes por fila con un pequeño margen */
+                        max-width: 400px; /* O un valor fijo si lo prefieres */
+                        margin-bottom: 10px; /* Espacio debajo de cada par de imágenes */
+                    }
 
-            .service-item:nth-child(odd) .image-container img,
-            .extra-feature:nth-child(odd) .image-container img {
-                width: 80%; /* La única imagen ocupa más ancho */
-                max-width: 600px;
-            }
-    </style>
-</head>
-<body>
+                    /* Ajuste para que una sola imagen ocupe todo el ancho */
+                    .service-item:nth-child(odd) .image-container,
+                    .extra-feature:nth-child(odd) .image-container {
+                        justify-content: center; /* Centra la única imagen */
+                    }
 
-    <header>
-        <div class="header-flex">
-            <img class="logo-header" src="zenith.png" alt="Logo de Zenith Car Wash">
-            <div class="header-text">
-                <h1>Bienvenido a Zenith Car Wash</h1>
-                <p>El destino premium para el cuidado y embellecimiento de tu automóvil en México.</p>
-            </div>
-        </div>
-    </header>
+                    .service-item:nth-child(odd) .image-container img,
+                    .extra-feature:nth-child(odd) .image-container img {
+                        width: 80%; /* La única imagen ocupa más ancho */
+                        max-width: 600px;
+                    }
+                    .contact-button {
+                        display: inline-block;
+                        width: 40px; /* Ajusta el tamaño según sea necesario */
+                        height: 40px;
+                        margin-right: 10px;
+                        border-radius: 5px;
+                        overflow: hidden; /* Asegura que la imagen se ajuste al botón */
+                        vertical-align: middle; /* Alinea verticalmente con el texto */
+                    }
 
-    <nav>
-        <a href="index.html" id="navInicio">Inicio</a>
-        <a href="servicios.html" id="navServicios">Servicios</a>
-        <a href="costos.html" id="navCostos">Costos</a>
-        <a href="extras.html" id="navExtras">Extras</a>
-        <a href="contacto.html" id="navContacto">Contacto</a>
-    </nav>
+                    .contact-button img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                    }
+
+                    .contact-info strong {
+                        display: none; /* Opcional: Oculta la etiqueta "Instagram:", etc. */
+                    }
+            </style>
+        </head>
+        <body>
+
+            <header>
+                <div class="header-flex">
+                    <img class="logo-header" src="imagens/zenith.png" alt="Logo de Zenith Car Wash">
+                    <div class="header-text">
+                        <h1>Bienvenido a Zenith Car Wash</h1>
+                        <p>El destino premium para el cuidado y embellecimiento de tu automóvil en México.</p>
+                    </div>
+                </div>
+            </header>
+            <nav>
+                <a href="index.html" id="navInicio">Inicio</a>
+                <a href="servicios.html" id="navServicios">Servicios</a>
+                <a href="costos.html" id="navCostos">Costos</a>
+                <a href="extras.html" id="navExtras">Extras</a>
+                <a href="contacto.html" id="navContacto">Contacto</a>
+            </nav>
     <section id="costos">
         <h2>Nuestros Paquetes y Precios</h2>
         <p>Ofrecemos una variedad de paquetes para adaptarnos a tus necesidades y presupuesto:</p>
