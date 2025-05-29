@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas de Pago</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            min-height: 100vh; /* Asegura que el body ocupe al menos la altura de la ventana */
+            margin: 0;
+            background-color: #f4f4f4;
+            background-image: url('C:/Users/HP/OneDrive/Escritorio/Autolavado/imagens/fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Añadido para fijar la imagen de fondo */
+        }
+        .payment-container {
+            width: 80%; /* Ancho del contenedor */
+            max-width: 600px; /* Ancho máximo del contenedor */
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Centra el texto dentro del contenedor */
+        }
+        .payment-option {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: left; /* Alinea el texto dentro de cada opción a la izquierda */
+        }
+        .payment-option h3 {
+            margin-top: 0;
+            text-align: center; /* Centra el título de cada sección */
+        }
+        .payment-details {
+            margin-top: 10px;
+            display: none; /* Oculto por defecto */
+        }
+        .payment-details label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .payment-details input[type="text"],
+        .payment-details input[type="number"] {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .payment-details button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .payment-details button:hover {
+            background-color: #0056b3;
+        }
+        .payment-method-select {
+            margin-bottom: 10px;
+            text-align: center; /* Centra los radio buttons */
+        }
+        .accepted-cards-top {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .accepted-cards-top img {
+            height: 30px;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+        .back-button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button {
+            padding: 10px 15px;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Para que la etiqueta <a> no tenga subrayado */
+        }
+        .back-button:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="payment-container">
+        <h2>Selecciona tu Forma de Pago</h2>
+
+        <div class="accepted-cards-top">
+            <p>Tarjetas Aceptadas:</p>
+            <img src="C:\Users\HP\OneDrive\Escritorio\Autolavado\imagens\visa.png"alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1200px-Mastercard-logo.svg.png" alt="Mastercard">
+            <img src="C:\Users\HP\OneDrive\Escritorio\Autolavado\imagens\am.png" alt="American Express">
+        </div>
+
+        <div class="payment-option">
+            <div class="payment-method-select">
+                <label>
+                    <input type="radio" name="payment_method" value="tarjeta" onclick="showPaymentDetails('tarjeta')">
+                    Tarjeta de Crédito/Débito
+                </label>
+            </div>
+            <div id="tarjeta-details" class="payment-details">
+                <h3>Detalles de la Tarjeta</h3>
+                <label for="card_number">Número de Tarjeta:</label>
+                <input type="number" id="card_number" name="card_number" placeholder="XXXX-XXXX-XXXX-XXXX">
+
+                <label for="expiry_date">Fecha de Expiración:</label>
+                <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/AA">
+
+                <label for="cvv">CVV:</label>
+                <input type="number" id="cvv" name="cvv" placeholder="XXX">
+
+                <button>Pagar con Tarjeta</button>
+            </div>
+        </div>
+
+        <div class="payment-option">
+            <div class="payment-method-select">
+                <label>
+                    <input type="radio" name="payment_method" value="paypal" onclick="showPaymentDetails('paypal')">
+                    PayPal
+                </label>
+            </div>
+            <div id="paypal-details" class="payment-details">
+                <h3>Pagar con PayPal</h3>
+                <p>Serás redirigido a la página segura de PayPal para completar tu pago.</p>
+                <button>Ir a PayPal</button>
+            </div>
+        </div>
+
+        <div class="payment-option">
+            <div class="payment-method-select">
+                <label>
+                    <input type="radio" name="payment_method" value="efectivo" onclick="showPaymentDetails('efectivo')">
+                    Efectivo
+                </label>
+            </div>
+            <div id="efectivo-details" class="payment-details">
+                <h3>Pago en Efectivo</h3>
+                <p>Por favor, selecciona una opción para el pago en efectivo:</p>
+                <label>
+                    <input type="radio" name="cash_option" value="tienda">
+                    Pagar en Tienda de Conveniencia (OXXO, 7-Eleven, etc.)
+                </label>
+                <label>
+                    <input type="radio" name="cash_option" value="entrega">
+                    Pagar al Recibir (Solo disponible en ciertas áreas)
+                </label>
+                <button>Confirmar Pago en Efectivo</button>
+            </div>
+        </div>
+
+        <div class="back-button-container">
+            <a href="file:///C:/Users/Grupo%206.1/Documents/Autolavado/index.html" class="back-button">Regresar al Inicio</a>
+        </div>
+    </div>
+
+    <script>
+        function showPaymentDetails(method) {
+            const tarjetaDetails = document.getElementById('tarjeta-details');
+            const paypalDetails = document.getElementById('paypal-details');
+            const efectivoDetails = document.getElementById('efectivo-details');
+
+            tarjetaDetails.style.display = 'none';
+            paypalDetails.style.display = 'none';
+            efectivoDetails.style.display = 'none';
+
+            if (method === 'tarjeta') {
+                tarjetaDetails.style.display = 'block';
+            } else if (method === 'paypal') {
+                paypalDetails.style.display = 'block';
+            } else if (method === 'efectivo') {
+                efectivoDetails.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>
